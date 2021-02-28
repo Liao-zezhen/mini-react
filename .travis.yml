@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - '12'
+  - "12"
 services:
   - docker
 
@@ -11,5 +11,5 @@ before_install:
 script:
   - parcel build ./index.js
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker build -t jinjietan/mini-react:latest .
-  - docker push jinjietan/mini-react:latest
+  - docker build -t liao-zezhen/mini-react:latest .
+  - docker push liao-zezhen/mini-react:latest
