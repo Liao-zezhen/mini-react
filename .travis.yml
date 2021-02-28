@@ -13,3 +13,6 @@ script:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker build -t awesomeow/mini-react:latest .
   - docker push awesomeow/mini-react:latest
+
+notifications:
+  slack: awesomeow:FcND9QUUkT8TZjRCDJfkl6IW
